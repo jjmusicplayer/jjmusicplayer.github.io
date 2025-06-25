@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YFL Music</title>
+  <link rel="stylesheet" href="fontello/css/fontello.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="player">
+    <div id="head">
+      <span id="go-back"><i class="icon-open"></i></span>
+      Odtwarzanie z albumu „TOXIC”
+      <span id="more"><i class="icon-more"></i></span>
+    </div><br>
+
+    <div id="img"><img src="img/toxic.jpg" height="300px" id="img1"></div>
+    <h1>BALLADA O SAMOTNOŚCI (vlone)</h1>
+    <h2>🅴 Young Multi</h2>
+    <audio id="audio" src="music/ballada-o-samotnosci.mp3"></audio>
+
+    <input type="range" id="seek" value="0" />
+    <div id="time-info">
+      <span id="current-time">0:00</span><span id="duration">0:00</span>
+
+    </div>
+    <div class="controls">
+      <button id="shuffle"><i class="icon-shuffle"></i></button>
+      <button id="prev"><i class="icon-previous"></i></button>
+      <button id="play"><i class="icon-play"></i></button>
+      <button id="next"><i class="icon-next"></i></button>
+      <button id="loop"><i class="icon-loop"></i></button>
+      <div class="footer">
+        <div id="right">
+          <button id="share"><i class="icon-share"></i></button>
+          <button id="list"><i class="icon-list"></i></button>
+        </div>
+      </div>
+    </div>
+    <div id="text">
+      <div id="text-preview">Podgląd tekstu</div>
+      <div id="lyrics-preview">
+      </div>
+      <button id="show-lyrics">Pokaż tekst</button>
+
+      <div id="lyrics-overlay">
+        <div id="lyrics-container">
+          <div id="song-info">
+            <img src="img/toxic.jpg" height="50px" id="img2">
+            <div id="track-info">
+              <h3>Title</h3>
+            <h4>- artist</h4>
+            </div>
+          </div>
+          <div id="lyrics">y</div>
+          <div id="bottom-bar">
+            <audio id="audio-lyr" src="music/ballada-o-samotnosci.mp3"></audio>
+            <input type="range" id="seek-lyr" value="0"/>
+            <button id="hide-lyrics"><i class="icon-open"></i></button>
+            <button id="prev-lyr"><i class="icon-previous"></i></button>
+            <button id="play-lyr"><i class="icon-play"></i></button>
+            <button id="next-lyr"><i class="icon-next"></i></button>
+            <button id="shuffle-lyr"><i class="icon-shuffle"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
