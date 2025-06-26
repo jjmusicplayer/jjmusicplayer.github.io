@@ -5,7 +5,7 @@
 		align-items: center;
 		height: 100vh;
 		margin: 0;
-		background: linear-gradient(#e81e2a, #212121);
+		background: linear-gradient(#515151, #212121);
 		color: #fff;
 	}
 
@@ -71,6 +71,11 @@
 		cursor: pointer;
 	}
 
+	.hidden {
+            display: none;
+            opacity: 0; /* Dla płynnego przejścia */
+        }
+
 	input[type="range"] {
 		width: 100%;
 		margin-top: 15px;
@@ -116,7 +121,7 @@
 
 	#text {
 		text-align: left;
-		background-color: #e81e2a;
+		background-color: #515151;
 		height: auto;
 		border-radius: 20px;
 	}
@@ -146,6 +151,16 @@
 		font-family: "Poppins", sans-serif;
 		font-weight: 500;
 		cursor: pointer;
+	}
+
+	#lyrics-new
+	{
+		text-align: left;
+		padding-left: 12px;
+		font-size: 24px;
+		font-weight: 600;
+		color: #212121;
+		margin-top: 100px;
 	}
 
 	#lyrics-overlay {
@@ -243,18 +258,9 @@
 		background-color: #e81e2a;
 	}
 
-	#lyrics
-	{
-		text-align: left;
-		padding-left: 12px;
-		font-size: 24px;
-		font-weight: 600;
-		color: #212121;
-		margin-top: 100px;
-	}
 
-	#right {
-		text-align: right;
+	#footer {
+		margin: 0;
 	}
 
 	i[class^="icon-play"] {
@@ -291,16 +297,68 @@
 		font-size: 22px;
 	}
 
+	i[class^="icon-shuffle"].active,
+	i[class^="icon-loop"].active {
+		color: #46ca40 !important;
+	}
+
 	i[class^="icon-loop"] {
 		font-size: 22px;
 	}
 
 	i[class^="icon-share"] {
-		font-size: 19px;
+		font-size: 17px;
 		margin-right: 0;
+		margin-left: 0;
 	}
 
 	i[class^="icon-list"] {
 		margin-left: 0;
-		font-size: 25px;
+		margin-right: 0;
+		font-size: 17px;
 	}
+
+	i[class^="icon-devices"] {
+		margin-left: 0;
+		margin-right: 0;
+		font-size: 17px;
+	}
+
+	i[class^="icon-dont-disturb"] {
+		margin-left: 0;
+		margin-right: 0;
+		font-size: 17px;
+	}
+
+	i[class^="icon-teledisk"] {
+		margin-left: 0;
+		margin-right: 0;
+		font-size: 17px;
+	}
+
+	i[class^="icon-lyrics"] {
+		margin-left: 0;
+		margin-right: 0;
+		font-size: 17px;
+	}
+
+	@media (max-width: 600px) {
+  h1 {
+    font-size: 1.3em;
+  }
+
+  h2
+  {
+	font-size: 1em;
+  }
+
+  #img img {
+    width: 100%;
+    height: auto;
+  }
+
+  .controls {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

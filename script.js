@@ -1,5 +1,15 @@
 const playlist = [
   {
+    title: "Unknown title",
+    artist: "Unknown artist",
+    album: "Unknown album",
+    src: "music/placeholder.mp3",
+    cover: "img/unknown.png",
+    lyrics: "<br>",
+    background: "linear-gradient(#515151, #212121)",
+    lyricsBackground: "#515151"
+  },
+  {
     title: "OSCAR",
     artist: "🅴 Young Multi, White Widow",
     album: "TOXIC",
@@ -104,43 +114,34 @@ const playlist = [
 
 
 let currentTrackIndex = 0;
+let isShuffle = false;
+let isLoop = false;
 
 const audio = document.getElementById("audio");
-const audioLyr = document.getElementById("audio-lyr");
 const playBtn = document.getElementById("play");
 const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
-const playBtnLyr = document.getElementById("play-lyr");
-const prevBtnLyr = document.getElementById("prev-lyr");
-const nextBtnLyr = document.getElementById("next-lyr");
 const seekBar = document.getElementById("seek");
-const seekBarLyr = document.getElementById("seek-lyr");
 const currentTimeElem = document.getElementById("current-time");
 const durationElem = document.getElementById("duration");
 const titleElem = document.querySelector("h1");
 const artistElem = document.querySelector("h2");
 const imgElem = document.getElementById("img1");
 const odtwarzanie = document.getElementById("head");
-const lyrics = document.getElementById("lyrics-preview");
-const titleElemLyr = document.querySelector("h3");
-const artistElemLyr = document.querySelector("h4");
-const imgElemLyr = document.getElementById("img2");
-const lyr = document.getElementById("lyrics");
+const lyrics = document.getElementById("lyrics");
+const shuffleBtn = document.getElementById("shuffle");
+const loopBtn = document.getElementById("loop");
+
 
 let isPlaying = false;
 
 function loadTrack(index) {
   const track = playlist[index];
   audio.src = track.src;
-  audioLyr.src = track.src;
   titleElem.textContent = track.title;
   artistElem.textContent = track.artist;
-  titleElemLyr.textContent = track.title;
-  artistElemLyr.textContent = track.artist;
   imgElem.src = track.cover;
-  imgElemLyr.src = track.cover;
   seekBar.value = 0;
-  seekBarLyr.value = 0;
   updateSeekBackground();
   currentTimeElem.textContent = "0:00";
   durationElem.textContent = "0:00";
@@ -149,45 +150,23 @@ function loadTrack(index) {
     Odtwarzanie z albumu „${track.album}”
     <span id="more"><i class="icon-more"></i></span>
   `;
-  lyrics.innerHTML = `${track.lyrics}`;
-
-  lyr.innerHTML = `${track.lyrics}`;
-
   document.body.style.background = track.background;
   document.getElementById("text").style.backgroundColor = track.lyricsBackground;
-  document.getElementById("lyrics-overlay").style.backgroundColor = track.lyricsBackground;
-  document.getElementById("hide-lyrics").style.backgroundColor = track.lyricsBackground;
-  document.getElementById("prev-lyr").style.backgroundColor = track.lyricsBackground;
-  document.getElementById("play-lyr").style.backgroundColor = track.lyricsBackground;
-  document.getElementById("next-lyr").style.backgroundColor = track.lyricsBackground;
-  document.getElementById("shuffle-lyr").style.backgroundColor = track.lyricsBackground;
-  document.getElementById("song-info").style.backgroundColor = track.lyricsBackground;
-  document.getElementById("bottom-bar").style.backgroundColor = track.lyricsBackground;
 }
 
 function playTrack() {
   audio.play();
   isPlaying = true;
   playBtn.innerHTML = "<i class='icon-pause'></i>";
-  playBtnLyr.innerHTML = "<i class='icon-pause'></i>";
 }
 
 function pauseTrack() {
   audio.pause();
   isPlaying = false;
   playBtn.innerHTML = "<i class='icon-play'></i>";
-  playBtnLyr.innerHTML = "<i class='icon-play'></i>";
 }
 
 playBtn.addEventListener("click", () => {
-  if (isPlaying) {
-    pauseTrack();
-  } else {
-    playTrack();
-  }
-});
-
-playBtnLyr.addEventListener("click", () => {
   if (isPlaying) {
     pauseTrack();
   } else {
@@ -201,52 +180,47 @@ nextBtn.addEventListener("click", () => {
   playTrack();
 });
 
-nextBtnLyr.addEventListener("click", () => {
-  currentTrackIndex = (currentTrackIndex + 1) % playlist.length;
-  loadTrack(currentTrackIndex);
-  playTrack();
-});
-
 prevBtn.addEventListener("click", () => {
   currentTrackIndex = (currentTrackIndex - 1 + playlist.length) % playlist.length;
   loadTrack(currentTrackIndex);
   playTrack();
 });
 
-prevBtnLyr.addEventListener("click", () => {
-  currentTrackIndex = (currentTrackIndex - 1 + playlist.length) % playlist.length;
-  loadTrack(currentTrackIndex);
-  playTrack();
-});
-
 audio.addEventListener("ended", () => {
-  currentTrackIndex = (currentTrackIndex + 1) % playlist.length;
-  loadTrack(currentTrackIndex);
-  playTrack();
-});
-
-audioLyr.addEventListener("ended", () => {
-  currentTrackIndex = (currentTrackIndex + 1) % playlist.length;
-  loadTrack(currentTrackIndex);
-  playTrack();
+  if (isLoop) {
+    audio.currentTime = 0;
+    playTrack();
+  } else if (isShuffle) {
+    let newIndex;
+    do {
+      newIndex = Math.floor(Math.random() * playlist.length);
+    } while (newIndex === currentTrackIndex && playlist.length > 1);
+    currentTrackIndex = newIndex;
+    loadTrack(currentTrackIndex);
+    playTrack();
+  } else {
+    currentTrackIndex = (currentTrackIndex + 1) % playlist.length;
+    loadTrack(currentTrackIndex);
+    playTrack();
+  }
 });
 
 audio.addEventListener("timeupdate", () => {
   const percentage = (audio.currentTime / audio.duration) * 100 || 0;
   seekBar.value = percentage;
-  seekBarLyr.value = percentage;
   updateSeekBackground();
   currentTimeElem.textContent = formatTime(audio.currentTime);
   durationElem.textContent = formatTime(audio.duration);
 });
 
-audioLyr.addEventListener("timeupdate", () => {
-  const percentage = (audio.currentTime / audio.duration) * 100 || 0;
-  seekBar.value = percentage;
-  seekBarLyr.value = percentage;
-  updateSeekBackground();
-  currentTimeElem.textContent = formatTime(audio.currentTime);
-  durationElem.textContent = formatTime(audio.duration);
+shuffleBtn.addEventListener("click", () => {
+  isShuffle = !isShuffle;
+  shuffleBtn.querySelector("i").classList.toggle("active", isShuffle);
+});
+
+loopBtn.addEventListener("click", () => {
+  isLoop = !isLoop;
+  loopBtn.querySelector("i").classList.toggle("active", isLoop);
 });
 
 seekBar.addEventListener("input", () => {
@@ -254,15 +228,9 @@ seekBar.addEventListener("input", () => {
   updateSeekBackground();
 });
 
-seekBarLyr.addEventListener("input", () => {
-  audioLyr.currentTime = (seekBar.value / 100) * audio.duration;
-  updateSeekBackground();
-});
-
 function updateSeekBackground() {
   const value = seekBar.value;
   seekBar.style.background = `linear-gradient(to right, #ededed ${value}%, rgba(237, 237, 237, 0.1) ${value}%)`;
-  seekBarLyr.style.background = `linear-gradient(to right, #ededed ${value}%, rgba(237, 237, 237, 0.1) ${value}%)`;
 }
 
 function formatTime(time) {
@@ -271,17 +239,9 @@ function formatTime(time) {
   return `${minutes}:${seconds.toString().padStart(2, "0")}`;
 }
 
-const showLyricsBtn = document.getElementById("show-lyrics");
-const hideLyricsBtn = document.getElementById("hide-lyrics");
-const lyricsOverlay = document.getElementById("lyrics-overlay");
-
-showLyricsBtn.addEventListener("click", () => {
-  lyricsOverlay.style.display = "block";
-});
-
-hideLyricsBtn.addEventListener("click", () => {
-  lyricsOverlay.style.display = "none";
-});
-
+document.getElementById("lyrics").addEventListener('click', function()
+{
+  document.getElementById("lyrics-overlay").classList.toggle('hidden');
+})
 
 loadTrack(currentTrackIndex);
