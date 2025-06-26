@@ -382,6 +382,13 @@
 			height: auto;
 		}
 
+		.controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 28px 0;
+		}
+
 		#lyrics-container {
 			width: 100%;
 			margin: 0;
@@ -493,25 +500,21 @@
 		}
 
 		i[class^="icon-play"] {
-			font-size: 24px;
+			font-size: 28px;
 			background-color: #ededed;
 			color: #212121;
-			border-radius: 100px;
-			padding-left: 7px;
-			padding-top: 11px;
-			padding-bottom: 11px;
-			padding-right: 7px;
+			border-radius: 50%;
+			width: 64px;
+			height: 64px;
 		}
 
 		i[class^="icon-pause"] {
-			font-size: 24px;
+			font-size: 28px;
 			background-color: #ededed;
 			color: #212121;
-			border-radius: 100px;
-			padding-left: 7px;
-			padding-top: 12px;
-			padding-bottom: 12px;
-			padding-right: 7px;
+			border-radius: 50%;
+			width: 64px;
+			height: 64px;
 		}
 
 		i[class^="icon-next"] {
@@ -522,8 +525,7 @@
 			font-size: 21px;
 		}
 
-		i[class^="icon-shuffle"] {
-			left: 0;
+		i[class^="icon-shuffle"]
 			font-size: 15px;
 		}
 
@@ -533,37 +535,25 @@
 
 		i[class^="icon-share"] {
 			font-size: 11px;
-			margin-right: 0;
-			margin-left: 0;
 		}
 
 		i[class^="icon-list"] {
-			margin-left: 0;
-			margin-right: 0;
 			font-size: 11px;
 		}
 
 		i[class^="icon-devices"] {
-			margin-left: 0;
-			margin-right: 0;
 			font-size: 11px;
 		}
 
 		i[class^="icon-dont-disturb"] {
-			margin-left: 0;
-			margin-right: 0;
 			font-size: 11px;
 		}
 
 		i[class^="icon-teledisk"] {
-			margin-left: 0;
-			margin-right: 0;
 			font-size: 11px;
 		}
 
 		i[class^="icon-lyrics"] {
-			margin-left: 0;
-			margin-right: 0;
 			font-size: 11px;
 		}
 
