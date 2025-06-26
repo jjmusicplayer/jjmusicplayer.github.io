@@ -121,16 +121,23 @@ const audio = document.getElementById("audio");
 const playBtn = document.getElementById("play");
 const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
-const seekBar = document.getElementById("seek");
+const playLyr = document.getElementById("play-lyr");
+const prevLyr = document.getElementById("prev-lyr");
+const nextLyr = document.getElementById("next-lyr");
+const seekBar = document.getElementById("seek-lyr");
 const currentTimeElem = document.getElementById("current-time");
 const durationElem = document.getElementById("duration");
 const titleElem = document.querySelector("h1");
 const artistElem = document.querySelector("h2");
 const imgElem = document.getElementById("img1");
+const titleElemLyr = document.querySelector("h3");
+const artistElemLyr = document.querySelector("h4");
+const imgElemLyr = document.getElementById("img2");
 const odtwarzanie = document.getElementById("head");
-const lyrics = document.getElementById("lyrics");
+const lyrics = document.getElementById("lyrics-new");
 const shuffleBtn = document.getElementById("shuffle");
 const loopBtn = document.getElementById("loop");
+const loopBtnLyr = document.getElementById("loop-lyr");
 
 
 let isPlaying = false;
@@ -141,28 +148,38 @@ function loadTrack(index) {
   titleElem.textContent = track.title;
   artistElem.textContent = track.artist;
   imgElem.src = track.cover;
+  titleElemLyr.textContent = track.title;
+  artistElemLyr.textContent = track.artist;
+  imgElemLyr.src = track.cover;
   seekBar.value = 0;
   updateSeekBackground();
   currentTimeElem.textContent = "0:00";
   durationElem.textContent = "0:00";
   odtwarzanie.innerHTML = `
     <span id="go-back"><i class="icon-open"></i></span>
-    Odtwarzanie z albumu „${track.album}”
+    „${track.album}”
     <span id="more"><i class="icon-more"></i></span>
   `;
+  lyrics.innerHTML = `${track.lyrics}`;
   document.body.style.background = track.background;
+  document.getElementById("lyrics-overlay").style.backgroundColor = track.lyricsBackground;
+  document.getElementById("lyrics-new").style.backgroundColor = track.lyricsBackground;
+  document.getElementById("song-info").style.backgroundColor = track.lyricsBackground;
+  document.getElementById("bottom-bar").style.backgroundColor = track.lyricsBackground;
 }
 
 function playTrack() {
   audio.play();
   isPlaying = true;
   playBtn.innerHTML = "<i class='icon-pause'></i>";
+  playLyr.innerHTML = "<i class='icon-pause'></i>";
 }
 
 function pauseTrack() {
   audio.pause();
   isPlaying = false;
   playBtn.innerHTML = "<i class='icon-play'></i>";
+  playLyr.innerHTML = "<i class='icon-play'></i>";
 }
 
 playBtn.addEventListener("click", () => {
@@ -180,6 +197,26 @@ nextBtn.addEventListener("click", () => {
 });
 
 prevBtn.addEventListener("click", () => {
+  currentTrackIndex = (currentTrackIndex - 1 + playlist.length) % playlist.length;
+  loadTrack(currentTrackIndex);
+  playTrack();
+});
+
+playLyr.addEventListener("click", () => {
+  if (isPlaying) {
+    pauseTrack();
+  } else {
+    playTrack();
+  }
+});
+
+nextLyr.addEventListener("click", () => {
+  currentTrackIndex = (currentTrackIndex + 1) % playlist.length;
+  loadTrack(currentTrackIndex);
+  playTrack();
+});
+
+prevLyr.addEventListener("click", () => {
   currentTrackIndex = (currentTrackIndex - 1 + playlist.length) % playlist.length;
   loadTrack(currentTrackIndex);
   playTrack();
@@ -222,6 +259,11 @@ loopBtn.addEventListener("click", () => {
   loopBtn.querySelector("i").classList.toggle("active", isLoop);
 });
 
+loopBtnLyr.addEventListener("click", () => {
+  isLoop = !isLoop;
+  loopBtn.querySelector("i").classList.toggle("active", isLoop);
+});
+
 seekBar.addEventListener("input", () => {
   audio.currentTime = (seekBar.value / 100) * audio.duration;
   updateSeekBackground();
@@ -238,7 +280,24 @@ function formatTime(time) {
   return `${minutes}:${seconds.toString().padStart(2, "0")}`;
 }
 
+document.addEventListener('keydown', (e) => {
+  if (e.code === 'Space') {
+    playBtn.click();
+  }
+  if (e.code === 'ArrowRight') {
+    nextBtn.click();
+  }
+  if (e.code === 'ArrowLeft') {
+    prevBtn.click();
+  }
+});
+
 document.getElementById("lyrics").addEventListener('click', function()
+{
+  document.getElementById("lyrics-overlay").classList.toggle('hidden');
+})
+
+document.getElementById("hide-lyrics").addEventListener('click', function()
 {
   document.getElementById("lyrics-overlay").classList.toggle('hidden');
 })

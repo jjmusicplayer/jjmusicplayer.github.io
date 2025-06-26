@@ -73,7 +73,7 @@
 
 	.hidden {
             display: none;
-            opacity: 0; /* Dla płynnego przejścia */
+            opacity: 0;
         }
 
 	input[type="range"] {
@@ -161,20 +161,29 @@
 		font-weight: 600;
 		color: #212121;
 		margin-top: 100px;
+		overflow-y: auto;
+		max-height: 800px;
+  		scrollbar-width: none;
+  		-ms-overflow-style: none;
+	}
+
+	#lyrics-new::-webkit-scrollbar
+	{
+		display: none;
 	}
 
 	#lyrics-overlay {
-		display: none;
 		position: fixed;
 		top: 0;
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-color: #e81e2a;
+		background-color: #515151;
 		color: #fff;
 		z-index: 2;
 		margin: 0;
 		justify-content: center;
+		transition: opacity 0.3s ease-in-out;
 	}
 
 	#lyrics-container {
@@ -188,9 +197,9 @@
 		font-size: 28px;
 		margin-bottom: 20px;
 		padding: 10px 20px;
-		background-color: #e81e2a;
 		color: white;
 		border: none;
+		background: none;
 		cursor: pointer;
 	}
 
@@ -199,30 +208,45 @@
 		position: fixed;
 		display: flex;
 		flex-direction: row;
-		background-color: #e81e2a;
 		margin: 0;
 	}
 
-	#prev-lyr,
-	#play-lyr,
+	#prev-lyr {
+		display: inline-flex;
+		margin-bottom: 20px;
+		padding: 10px 20px;
+		color: white;
+		border: none;
+		background: none;
+		cursor: pointer;
+	}
+	#play-lyr {
+		display: inline-flex;
+		margin-bottom: 20px;
+		padding: 10px 20px;
+		color: white;
+		border: none;
+		background: none;
+		cursor: pointer;
+	}
 	#next-lyr {
 		display: inline-flex;
 		margin-bottom: 20px;
 		padding: 10px 20px;
-		background-color: #e81e2a;
 		color: white;
 		border: none;
+		background: none;
 		cursor: pointer;
 	}
 
-	#shuffle-lyr {
+	#loop-lyr {
 		display: inline-flex;
 		font-size: 28px;
 		margin-bottom: 20px;
 		padding: 10px 20px;
-		background-color: #e81e2a;
 		color: white;
 		border: none;
+		background: none;
 		cursor: pointer;
 	}
 
@@ -255,7 +279,7 @@
 	#bottom-bar {
 		position: fixed;
 		bottom: 0;
-		background-color: #e81e2a;
+		background-color: #515151;
 	}
 
 
@@ -299,7 +323,7 @@
 
 	i[class^="icon-shuffle"].active,
 	i[class^="icon-loop"].active {
-		color: #46ca40 !important;
+		color: #1dd15e !important;
 	}
 
 	i[class^="icon-loop"] {
@@ -361,4 +385,187 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+
+  #lyrics-container {
+		width: 100%;
+		margin: 0;
+		text-align: center;
+	}
+
+	#hide-lyrics {
+		display: inline-flex;
+		font-size: 28px;
+		margin-bottom: 20px;
+		padding: 10px 20px;
+		color: white;
+		border: none;
+		background: none;
+		cursor: pointer;
+	}
+
+	#song-info {
+		top: 25px;
+		left: 12px;
+		position: fixed;
+		display: flex;
+		flex-direction: row;
+		margin: 0;
+		
+	}
+
+	#prev-lyr {
+		display: inline-flex;
+		margin-bottom: 20px;
+		padding: 10px 20px;
+		color: white;
+		border: none;
+		background: none;
+		cursor: pointer;
+	}
+	#play-lyr {
+		display: inline-flex;
+		margin-bottom: 20px;
+		padding: 10px 20px;
+		color: white;
+		border: none;
+		background: none;
+		cursor: pointer;
+	}
+	#next-lyr {
+		display: inline-flex;
+		margin-bottom: 20px;
+		padding: 10px 20px;
+		color: white;
+		border: none;
+		background: none;
+		cursor: pointer;
+	}
+
+	#loop-lyr {
+		display: inline-flex;
+		font-size: 28px;
+		margin-bottom: 20px;
+		padding: 10px 20px;
+		color: white;
+		border: none;
+		background: none;
+		cursor: pointer;
+	}
+
+	#img2 {
+		border-radius: 4px;
+	}
+
+	h3 {
+		font-size: 20px;
+		font-weight: 500;
+		text-align: left;
+		color: #ededed;
+		margin-top: 0;
+		margin-bottom: 0;
+		margin-left: 10px;
+		padding: 0;
+	}
+
+	h4 {
+		font-size: 15px;
+		font-weight: 400;
+		text-align: left;
+		padding: 0;
+		margin-left: 10px;
+		margin-top: 0;
+		margin-bottom: 0;
+		color: #dedede;
+	}
+
+	#bottom-bar {
+		position: fixed;
+		bottom: 0;
+		background-color: #515151;
+		width: 100%;
+	}
+
+	#lyrics-new
+	{
+		text-align: left;
+		padding-left: 12px;
+		font-size: 24px;
+		font-weight: 600;
+		color: #212121;
+		margin-top: 100px;
+	}
+
+  i[class^="icon-play"] {
+		font-size: 32px;
+		background-color: #ededed;
+		color: #212121;
+		border-radius: 100px;
+		padding-left: 7px;
+		padding-top: 12px;
+		padding-bottom: 12px;
+		padding-right: 7px;
+	}
+
+	i[class^="icon-pause"] {
+		font-size: 32px;
+		background-color: #ededed;
+		color: #212121;
+		border-radius: 100px;
+		padding-left: 7px;
+		padding-top: 12px;
+		padding-bottom: 12px;
+		padding-right: 7px;
+	}
+
+	i[class^="icon-next"] {
+		font-size: 29px;
+	}
+
+	i[class^="icon-previous"] {
+		font-size: 29px;
+	}
+
+	i[class^="icon-shuffle"] {
+		font-size: 19px;
+	}
+
+	i[class^="icon-loop"] {
+		font-size: 19px;
+	}
+
+	i[class^="icon-share"] {
+		font-size: 14px;
+		margin-right: 0;
+		margin-left: 0;
+	}
+
+	i[class^="icon-list"] {
+		margin-left: 0;
+		margin-right: 0;
+		font-size: 14px;
+	}
+
+	i[class^="icon-devices"] {
+		margin-left: 0;
+		margin-right: 0;
+		font-size: 14px;
+	}
+
+	i[class^="icon-dont-disturb"] {
+		margin-left: 0;
+		margin-right: 0;
+		font-size: 14px;
+	}
+
+	i[class^="icon-teledisk"] {
+		margin-left: 0;
+		margin-right: 0;
+		font-size: 14px;
+	}
+
+	i[class^="icon-lyrics"] {
+		margin-left: 0;
+		margin-right: 0;
+		font-size: 14px;
+	}
 }
