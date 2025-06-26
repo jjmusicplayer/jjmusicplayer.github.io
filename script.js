@@ -151,7 +151,6 @@ function loadTrack(index) {
     <span id="more"><i class="icon-more"></i></span>
   `;
   document.body.style.background = track.background;
-  document.getElementById("text").style.backgroundColor = track.lyricsBackground;
 }
 
 function playTrack() {
