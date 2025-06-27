@@ -188,7 +188,7 @@ function loadTrack(index) {
 
   if(`${track.explicit}` == '1')
   {
-    titleElem.innerHTML += '<p id="explicit"> 🅴</p>';
+    titleElem.innerHTML += '<p id="explicit">🅴</p>';
   }
 
   document.getElementById("lyrics-overlay").style.backgroundColor = track.lyricsBackground;
