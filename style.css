@@ -232,22 +232,22 @@
 		background-color: #515151;
 	}
 
-		.bottom-controls {
-			margin-top: 20px;
-			margin-bottom: 20px;
-			display: flex;
-            justify-content: space-between;
-            align-items: center;
-		}
+	.bottom-controls {
+		margin-top: 20px;
+		margin-bottom: 20px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
 
-		.bottom-controls button {
-			color: white;
-			border: none;
-			background: none;
-			cursor: pointer;
-		}
+	.bottom-controls button {
+		color: white;
+		border: none;
+		background: none;
+		cursor: pointer;
+	}
 
-	.footer button{
+	.footer button {
 		background: none;
 		border: none;
 		color: #fff;
@@ -256,13 +256,24 @@
 		cursor: pointer;
 	}
 
+	#explicit {
+		display: inline;
+		font-weight: normal;
+		font-family: "Noto Sans HK", sans-serif;
+		margin-left: 4px;
+		font-size: 90%;
+		color: #dedede;
+	}
+
 	i[class^="icon-play"] {
 		font-size: 32px;
 		background-color: #ededed;
 		color: #212121;
-		border-radius: 50%;
-		width: 64px;
-		height: 64px;
+		border-radius: 100px;
+		padding-left: 7px;
+		padding-top: 12px;
+		padding-bottom: 12px;
+		padding-right: 7px;
 	}
 
 	i[class^="icon-pause"] {
@@ -349,16 +360,10 @@
 		}
 
 		.controls {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 28px 0;
-		}
-
-		#lyrics-container {
-			width: 100%;
-			margin: 0;
-			text-align: center;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin: 28px 0;
 		}
 
 		#lyrics-container {
@@ -403,16 +408,15 @@
 			color: #dedede;
 		}
 
-		#bottom-bar
-		{
+		#bottom-bar {
 			width: 100%;
 		}
 
 		.bottom-controls {
 			width: 90%;
 			display: flex;
-            justify-content: space-between;
-            align-items: center;
+			justify-content: space-between;
+			align-items: center;
 		}
 
 		.bottom-controls button {
@@ -420,6 +424,10 @@
 			border: none;
 			background: none;
 			cursor: pointer;
+		}
+
+		#hide-lyrics i {
+			font-size: 19px;
 		}
 
 		#lyrics-new {
@@ -436,6 +444,8 @@
 			background-color: #ededed;
 			color: #212121;
 			border-radius: 50%;
+			width: 64px;
+			height: 64px;
 		}
 
 		i[class^="icon-pause"] {
@@ -456,14 +466,6 @@
 		}
 
 		i[class^="icon-shuffle"] {
-			font-size: 21px;
-		}
-
-		i[class^="icon-previous"] {
-			font-size: 21px;
-		}
-
-		i[class^="icon-shuffle"]{
 			font-size: 15px;
 		}
 
@@ -497,7 +499,7 @@
 
 		#footer {
 			display: flex;
-            justify-content: space-between;
-            align-items: center;
+			justify-content: space-between;
+			align-items: center;
 		}
 	}
