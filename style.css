@@ -358,6 +358,12 @@
 		}
 
 		#lyrics-container {
+			width: 100%;
+			margin: 0;
+			text-align: center;
+		}
+
+		#lyrics-container {
 			width: 90%;
 			margin: 0;
 			text-align: center;
@@ -454,6 +460,14 @@
 		}
 
 		i[class^="icon-shuffle"] {
+			font-size: 21px;
+		}
+
+		i[class^="icon-previous"] {
+			font-size: 21px;
+		}
+
+		i[class^="icon-shuffle"]{
 			font-size: 15px;
 		}
 
