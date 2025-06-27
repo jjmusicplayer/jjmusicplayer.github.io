@@ -7,7 +7,7 @@ const playlist = [
     cover: "img/unknown.png",
     coverSize: "1000x1000",
     lyrics: "<br>",
-    background: "linear-gradient(#515151, #212121)",
+    background: "linear-gradient(#515151, #121212)",
     lyricsBackground: "#515151",
     explicit: "0"
   },
@@ -19,7 +19,7 @@ const playlist = [
     cover: "img/toxic.png",
     coverSize: "1200x1200",
     lyrics: "Cały pachnę stylem to przyciąga twoją hoe<br>Nie chcę słuchać plotek moje życie to real talk<br>Wszędzie drogie ciuchy drogie kurwy drogie flow<br>Przestań moje życie filmy akcji twoje to komedia<br>Złoty chłopak ale nie mam nic z aktora<br>Bez czapy płynę zawsze a należy mi się Oscar<br>Jak wpadają ziomy na crib to powstań<br>Jak wpadają ziomy na crib to powstań<br><br>Od małego chciałem mieć diamenty<br>Zanim zrobiłem je z Bedim czułem się przeklęty<br>Historia znów zatacza koło znowu underrated<br>Ale suko nigdy over nigdy nie odejde<br>Nasz shit fresh to markowy sort<br>Gruby trap CEO big boss jak Rick Ross<br>Ugh smutna bitch ona szuka clout'u<br>Ona zrobi dzisiaj wszystko dla kontraktu<br>Moje ziomy status free agent<br>Robimy to na swoim jebać major label<br>Zobacz tylko jak ten styl wchodzi<br>Mam go dawno suko od narodzin<br>Duże body duże fele<br>Duży ass duży joint no i jest weselej<br>Biały chłopak ale luz mam<br>No i lubię kiedy ona egzotyczna<br><br>Cały pachnę stylem to przyciąga twoją twoją hoe<br>Nie chcę słuchać plotek moje życie to real talk<br>Wszędzie drogie ciuchy drogie kurwy drogie flow<br>Przestań moje życie filmy akcji twoje to komedia<br>Złoty chłopak ale nie mam nic z aktora<br>Bez czapy płynę zawsze a należy mi się Oscar<br>Jak wpadają ziomy na crib to powstań<br>Jak wpadają ziomy na crib to powstań<br><br>One kochają nasz styl chciały być tu z nami<br>Oni chcieli pograć z nami lecz to nie Konami<br>Ma być cuban link wypełniony diamentami (VVS)<br>Egzotyczna hoe chciała byśmy byli sami (yeah)<br>Mała zrobisz team potem możesz sobie iść (to the team)<br>Bitch we 'bout that action nie jesteśmy wannabes (nie)<br>Urodzony na tych blokach lil hood baby shit (okay)<br>Ja liczę na skład dawno już nie liczę liczb (squad)<br>I got the keys mała suko jak Future (jak Future)<br>Ja to nauczyciel ty co najwyżej to uczeń (yeah)<br>Mały ziomie przypominasz troche router (trochę co)<br>Chodzi o router co ma parę zakłóceń (let's go)<br><br>Cały pachnę stylem to przyciąga twoją twoją hoe<br>Nie chcę słuchać plotek moje życie to real talk<br>Wszędzie drogie ciuchy drogie kurwy drogie flow<br>Przestań moje życie filmy akcji twoje to komedia<br>Złoty chłopak ale nie mam nic z aktora<br>Bez czapy płynę zawsze a należy mi się Oscar<br>Jak wpadają ziomy na crib to powstań<br>Jak wpadają ziomy na crib to powstań<br><br>Robię ballin' out suko a to gówno nie dla was (pow pow)<br>Dziwko u mnie nie ma puchy tylko szybko mija czas (mija czas)<br>Mija dwie trzy minuty albo cały kilogram (ay yeah)<br>Benz Benz Gucci Gucci I've been flexin' all the time (Gucci Gucci)<br>Nie podzieli nas suka i nominał (w chuju nominał)<br>W chuju mam wasze opinie was o rady nie pytam<br>Nie chcę słuchać twojej nuty bo się zaraz zerzygam (zerzygam)<br>Ona skacze na giwere ja za włosy ją chwytam (yikes)<br>U mnie balet pełen ziomów a u ciebie jest stypa (huh)<br>Twój ziom faja jebana a się kreuje na gita (okay)<br>Suka udaje doznania bo ledwo co ją dotykasz (pow pow)<br>Ty jesteś pałą do szczania i cała ta twoja klika (pow)<br><br>Cały pachnę stylem to przyciąga twoją twoją hoe<br>Nie chcę słuchać plotek moje życie to real talk<br>Wszędzie drogie ciuchy drogie kurwy drogie flow<br>Przestań moje życie filmy akcji twoje to komedia<br>Złoty chłopak ale nie mam nic z aktora<br>Bez czapy płynę zawsze a należy mi się Oscar<br>Jak wpadają ziomy na crib to powstań<br>Jak wpadają ziomy na crib to powstań<br>",
-    background: "linear-gradient(#e81e2a, #212121)",
+    background: "linear-gradient(#e81e2a, #121212)",
     lyricsBackground: "#e81e2a",
     explicit: "1"
   },
@@ -31,7 +31,7 @@ const playlist = [
     cover: "img/toxic.png",
     coverSize: "1200x1200",
     lyrics: "Co to jest miłość?<br>Łzy znowu lecą mi na nowy Vlone na na<br>Do zdjęcia uśmiech a wszystko się zmienia<br>Gdy w pokoju zostaję już tylko sam<br>Na na na na na na<br>Zostaję sam<br>Na na na na na na<br>Zostaję sam<br>Co to jest miłość?<br>",
-    background: "linear-gradient(#e81e2a, #212121)",
+    background: "linear-gradient(#e81e2a, #121212)",
     lyricsBackground: "#e81e2a",
     explicit: "1" 
   },
@@ -43,7 +43,7 @@ const playlist = [
     cover: "img/toxic.png",
     coverSize: "1200x1200",
     lyrics: "Dzwonię do ziomeczków ziomów<br>Dzwonię do ziomeczków ziomów<br>Kiedy potrzebuję brokułów<br>Kiedy nie mają co robić na chacie to gramy tu z nudów yeah<br>Czuję dobry vibe niech tak już będzie bez kłótni i brudów<br>Yeah slatt<br>Dzwonię do dzwonię do ziomeczków ziomów<br>",
-    background: "linear-gradient(#e81e2a, #212121)",
+    background: "linear-gradient(#e81e2a, #121212)",
     lyricsBackground: "#e81e2a",
     explicit: "1"
   },
@@ -55,7 +55,7 @@ const playlist = [
     cover: "img/toxic.png",
     coverSize: "1200x1200",
     lyrics: "W łapie mam telefon, a na koncie trzymam se tysiące<br>Ale martwię się bo jakiś pajac, w komentarzu mi napisał że się kończę<br>Co za bezsens, kiedyś marzyłem o tym miejscu w którym dziś jestem<br>Presja mnie wykańcza bo oczekują tu więcej, ale jak upadasz kto ci poda rękę<br>Nie chcę wyjść na beksę, ale komu się wypłakać kiedy kłuje serce<br>Tysiące ludzi chce zająć twoje miejsce<br>Tysiące ludzi chce wbijać na backstage'e<br>Daj mi tysiąc miłości albo nic<br>Tym co poszli chuj do dupy albo chuj im w ryj<br>Chcę żebyś przy mnie był nawet kiedy nie mam sił<br>Chcę żebyś przy mnie był nawet kiedy nie mam sił<br><br>Powiedz czego chcesz<br>Popatrz na mnie powiedz „jest okej”<br>Popatrz na mnie powiedz „jest okej”<br>I potem przytul mnie<br>Szepnij mi do ucha „jest okej”<br>Podaj rękę kiedy będzie źle<br>Powiedz czego chcesz<br>Popatrz na mnie powiedz „jest okej”<br>Popatrz na mnie powiedz „jest okej”<br>I potem przytul mnie<br>Szepnij mi do ucha „jest okej”<br>Podaj rękę kiedy będzie źle<br><br>Byłem już na szczycie na dole, na szczycie na dole, na szczycie na dole, na szczycie na dole<br>Jakbyś przeżył rollercoaster na mym miejscu<br>To byś albo nie żył albo zrezygnował już na wejściu<br>Są momenty kiedy chciałem skończyć z tym<br>Ale obiecałem nie dam satysfakcji im<br>Kiedy masz na bani taki syf, ciężko znaleźć siłę mi by do przodu iść<br>By do przodu iść huh<br>By do przodu iść<br>By do przodu iść<br><br>Powiedz czego chcesz<br>Popatrz na mnie powiedz „jest okej”<br>Popatrz na mnie powiedz „jest okej”<br>I potem przytul mnie<br>Szepnij mi do ucha „jest okej”<br>Podaj rękę kiedy będzie źle<br>Powiedz czego chcesz<br>Popatrz na mnie powiedz „jest okej”<br>Popatrz na mnie powiedz „jest okej”<br>I potem przytul mnie<br>Szepnij mi do ucha „jest okej”<br>Podaj rękę kiedy będzie źle<br>Powiedz czego chcesz<br>Popatrz na mnie powiedz „jest okej”<br>Popatrz na mnie powiedz „jest okej”<br>I potem przytul mnie<br>Szepnij mi do ucha „jest okej”<br>Podaj rękę kiedy będzie źle<br>Powiedz czego chcesz<br>Popatrz na mnie powiedz „jest okej”<br>Popatrz na mnie powiedz „jest okej”<br>I potem przytul mnie<br>Szepnij mi do ucha „jest okej”<br>Podaj rękę kiedy będzie źle",
-    background: "linear-gradient(#e81e2a, #212121)",
+    background: "linear-gradient(#e81e2a, #121212)",
     lyricsBackground: "#e81e2a",
     explicit: "1"
   },
@@ -67,7 +67,7 @@ const playlist = [
     cover: "img/toxic.png",
     coverSize: "1200x1200",
     lyrics: "Ponad chmurami lecę, patrzę znów na ciebie<br>Mogę mieć co chcę, a chcę mieć tylko ciebie<br>Silnik auta ryczy więc, już dobrze wiesz kto jedzie<br>Przejmujemy od was ster, zaczynamy nowy dzień<br>Nowy dzień Boże co za dzień, jeśli to jest sen<br>To proszę nie budź mnie, wielkie marzenia<br>W końcu odnalazłem życia sens, jeśli to jest sen<br>To proszę nie budź mnie, proszę nie budź uh<br><br>Duży check duży flex uh uh<br>Duży hejt mocny seks uh uh<br>Złoty chain nie żaden fake uh uh<br>Jak krzyczę gang to für die Gang<br>Znowu chodzę zamulony, ale nie przez trawę<br>W nocy piszę zwroty, pewnie skończę je nad ranem<br>Ambicje mi nie dają spać (spać)<br>Mały Multi duży świat<br>Mały Multi duży skarb<br>Mały Multi duży bank yeah<br>Presja siada mi na banię, nie chcę już nikogo zawieść<br>Chcę wyjechać gdzieś daleko, szybko jak na autobahnie<br>Chcieli gonić nie dogonią nas, nie nie to ja wolny tak jak ptak<br><br>Ponad chmurami lecę, patrzę znów na ciebie<br>Mogę mieć co chcę, a chcę mieć tylko ciebie<br>Silnik auta ryczy więc, już dobrze wiesz kto jedzie<br>Przejmujemy od was ster, zaczynamy nowy dzień<br>Nowy dzień Boże co za dzień, jeśli to jest sen<br>To proszę nie budź mnie, wielkie marzenia<br>W końcu odnalazłem życia sens, jeśli to jest sen<br>To proszę nie budź mnie, proszę nie budź uh<br><br>Duży check duży flex uh uh<br>Duży hejt mocny seks uh uh<br>Złoty chain nie żaden fake uh uh<br>Jak krzyczę gang to für die Gang<br>Popatrz mi w oczy i złap mnie za rękę, koloruję świat<br>W dłoni trzymasz kolorowe te pędzle, dawno odszedł strach<br>Znowu dożylnie pompujesz mi szczęście, czuję zmęczenie i presję<br>Pomóż mi przeżyć bo sam to nie przejdę, może się uda wydostać nadzieję<br>Huh huh nie chcę być sam<br>Huh huh chcę zatrzymać czas<br>W każdym miejscu mogę być, liczy się gdzie jesteś ty<br><br>Ponad chmurami lecę, patrzę znów na ciebie<br>Mogę mieć co chcę, a chcę mieć tylko ciebie<br>Silnik auta ryczy więc, już dobrze wiesz kto jedzie<br>Przejmujemy od was ster, zaczynamy nowy dzień<br>Nowy dzień Boże co za dzień, jeśli to jest sen<br>To proszę nie budź mnie, wielkie marzenia<br>W końcu odnalazłem życia sens, jeśli jest to sen<br>To proszę nie budź mnie, proszę nie budź",
-    background: "linear-gradient(#e81e2a, #212121)",
+    background: "linear-gradient(#e81e2a, #121212)",
     lyricsBackground: "#e81e2a",
     explicit: "1"
   },
@@ -79,7 +79,7 @@ const playlist = [
     cover: "img/toxic.png",
     coverSize: "1200x1200",
     lyrics: "W moim sercu pustka<br>Nie mów do mnie skarbie<br>No bo już mnie nie oszukasz<br>Żyję szybko jakby dla mnie już nie było jutra<br>Przestań mnie już szukać<br>Proszę przestań szukać<br>W moim sercu pustka<br>Nie mów do mnie skarbie<br>No bo już mnie nie oszukasz<br>",
-    background: "linear-gradient(#e81e2a, #212121)",
+    background: "linear-gradient(#e81e2a, #121212)",
     lyricsBackground: "#e81e2a",
     explicit: "1"
   },
@@ -91,7 +91,7 @@ const playlist = [
     cover: "img/toxic.png",
     coverSize: "1200x1200",
     lyrics: "Yeah, yeah, każdy z ziomali jest z innej planety, yeah<br>Cała galaktyka nasza, a niebo fioletowe jest, tak jak Fanta<br>Wyjebałem jak kometa i jestem na topie, a wołają falstart<br>Kokpit zamknięty, niedowiarkom mówię dziś pa-pa (pa-pa)<br>",
-    background: "linear-gradient(#e81e2a, #212121)",
+    background: "linear-gradient(#e81e2a, #121212)",
     lyricsBackground: "#e81e2a",
     explicit: "1"
   },
@@ -103,7 +103,7 @@ const playlist = [
     cover: "img/toxic.png",
     coverSize: "1200x1200",
     lyrics: "Nigdy uh nigdy nie śpię, 24 gang nie jestem skejtem<br>Nigdy uh nigdy nie śpię, robię tą bi big booty w Benzie<br>Nigdy uh nigdy nie śpię, 24 gang nie jestem skejtem<br>Nigdy uh nigdy nie śpię, robię tą bih big booty w Benzie<br>Nigdy uh<br>Pomimo że piękna pani, to nie mogę gonić za nią tak jak berek<br>Love no thotties jak Keef, ale czasami nie myślę już sercem<br>Suko kim ty jesteś, nie mów do mnie kiedy lecę na wavie<br>Psujesz mi mood, odejdź ode mnie i proszę zrób miejsce<br>Moi ziomale to slimes, ty jesteś fake ty jesteś clown<br>Moi ziomale to slimes, wy macie glock my chcemy funk<br>Moi ziomale to slimes, wpierdala w opps dawaj mi guap<br>Moi ziomale to slimes<br>Moi ziomale to gang gang",
-    background: "linear-gradient(#e81e2a, #212121)",
+    background: "linear-gradient(#e81e2a, #121212)",
     lyricsBackground: "#e81e2a",
     explicit: "1"
   },
@@ -115,7 +115,7 @@ const playlist = [
     cover: "img/charger.png",
     coverSize: "592x592",
     lyrics: "Jestem przyjacielem moich zmartwień, ryczałem jak Charger<br>Już nie ma odwrotu, więc przeżyje lub padnę<br>Rzucili nam kolczatkę, zrobiłem z niej parkiet<br>Nie żałuję żadnych krzywd, napisały bajkę",
-    background: "linear-gradient(#46ca40, #212121)",
+    background: "linear-gradient(#46ca40, #121212)",
     lyricsBackground: "#46ca40",
     explicit: "1"
   },
@@ -127,7 +127,7 @@ const playlist = [
     cover: "img/njb.png",
     coverSize: "640x640",
     lyrics: "Pamiętam, yeah (Sushi), sushi nad wodą<br>Tylko po to by się potknąć, wylądować u mnie<br>Pamiętam jak (mówisz), że będziesz obok, choćby mierzyli do nas<br>Jesteś gotów dostać kulkę (Jak dobrze wiedzieć, że)<br>Że żyjesz, o żyjesz, o żyjesz, oh yeah<br>(Jak dobrze wiedzieć, że)<br>Że po tym wszystkim nadal budzisz się tak blisko mnie, yeah",
-    background: "linear-gradient(#687c8c, #212121)",
+    background: "linear-gradient(#687c8c, #121212)",
     lyricsBackground: "#687c8c",
     explicit: "1"
   }
