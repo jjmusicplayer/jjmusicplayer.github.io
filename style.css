@@ -191,17 +191,6 @@
 		text-align: center;
 	}
 
-	#hide-lyrics {
-		display: inline-flex;
-		font-size: 28px;
-		margin-bottom: 20px;
-		padding: 10px 20px;
-		color: white;
-		border: none;
-		background: none;
-		cursor: pointer;
-	}
-
 	#song-info {
 		top: 25px;
 		position: fixed;
@@ -210,46 +199,6 @@
 		margin: 0;
 	}
 
-	#prev-lyr {
-		display: inline-flex;
-		margin-bottom: 20px;
-		padding: 10px 20px;
-		color: white;
-		border: none;
-		background: none;
-		cursor: pointer;
-	}
-
-	#play-lyr {
-		display: inline-flex;
-		margin-bottom: 20px;
-		padding: 10px 20px;
-		color: white;
-		border: none;
-		background: none;
-		cursor: pointer;
-	}
-
-	#next-lyr {
-		display: inline-flex;
-		margin-bottom: 20px;
-		padding: 10px 20px;
-		color: white;
-		border: none;
-		background: none;
-		cursor: pointer;
-	}
-
-	#loop-lyr {
-		display: inline-flex;
-		font-size: 28px;
-		margin-bottom: 20px;
-		padding: 10px 20px;
-		color: white;
-		border: none;
-		background: none;
-		cursor: pointer;
-	}
 
 	#img2 {
 		border-radius: 4px;
@@ -283,9 +232,28 @@
 		background-color: #515151;
 	}
 
+		.bottom-controls {
+			margin-top: 20px;
+			margin-bottom: 20px;
+			display: flex;
+            justify-content: space-between;
+            align-items: center;
+		}
 
-	#footer {
-		margin: 0;
+		.bottom-controls button {
+			color: white;
+			border: none;
+			background: none;
+			cursor: pointer;
+		}
+
+	.footer button{
+		background: none;
+		border: none;
+		color: #fff;
+		font-size: 24px;
+		margin: 10px;
+		cursor: pointer;
 	}
 
 	i[class^="icon-play"] {
@@ -382,21 +350,17 @@
 			height: auto;
 		}
 
-		#lyrics-container {
-			width: 100%;
-			margin: 0;
-			text-align: center;
+		.controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 28px 0;
 		}
 
-		#hide-lyrics {
-			display: inline-flex;
-			font-size: 28px;
-			margin-bottom: 20px;
-			padding: 10px 20px;
-			color: white;
-			border: none;
-			background: none;
-			cursor: pointer;
+		#lyrics-container {
+			width: 90%;
+			margin: 0;
+			text-align: center;
 		}
 
 		#song-info {
@@ -407,47 +371,6 @@
 			flex-direction: row;
 			margin: 0;
 
-		}
-
-		#prev-lyr {
-			display: inline-flex;
-			margin-bottom: 20px;
-			padding: 10px 20px;
-			color: white;
-			border: none;
-			background: none;
-			cursor: pointer;
-		}
-
-		#play-lyr {
-			display: inline-flex;
-			margin-bottom: 20px;
-			padding: 10px 20px;
-			color: white;
-			border: none;
-			background: none;
-			cursor: pointer;
-		}
-
-		#next-lyr {
-			display: inline-flex;
-			margin-bottom: 20px;
-			padding: 10px 20px;
-			color: white;
-			border: none;
-			background: none;
-			cursor: pointer;
-		}
-
-		#loop-lyr {
-			display: inline-flex;
-			font-size: 28px;
-			margin-bottom: 20px;
-			padding: 10px 20px;
-			color: white;
-			border: none;
-			background: none;
-			cursor: pointer;
 		}
 
 		#img2 {
@@ -476,11 +399,23 @@
 			color: #dedede;
 		}
 
-		#bottom-bar {
-			position: fixed;
-			bottom: 0;
-			background-color: #515151;
+		#bottom-bar
+		{
 			width: 100%;
+		}
+
+		.bottom-controls {
+			width: 90%;
+			display: flex;
+            justify-content: space-between;
+            align-items: center;
+		}
+
+		.bottom-controls button {
+			color: white;
+			border: none;
+			background: none;
+			cursor: pointer;
 		}
 
 		#lyrics-new {
@@ -493,81 +428,66 @@
 		}
 
 		i[class^="icon-play"] {
-			font-size: 27px;
+			font-size: 28px;
 			background-color: #ededed;
 			color: #212121;
-			border-radius: 100px;
-			padding-left: 7px;
-			padding-top: 12px;
-			padding-bottom: 12px;
-			padding-right: 7px;
+			border-radius: 50%;
+			width: 64px;
+			height: 64px;
 		}
 
 		i[class^="icon-pause"] {
-			font-size: 27px;
+			font-size: 28px;
 			background-color: #ededed;
 			color: #212121;
-			border-radius: 100px;
-			padding-left: 7px;
-			padding-top: 12px;
-			padding-bottom: 12px;
-			padding-right: 7px;
+			border-radius: 50%;
+			width: 64px;
+			height: 64px;
 		}
 
 		i[class^="icon-next"] {
-			font-size: 24px;
+			font-size: 22px;
 		}
 
 		i[class^="icon-previous"] {
-			font-size: 24px;
+			font-size: 22px;
 		}
 
 		i[class^="icon-shuffle"] {
-			left: 0;
-			font-size: 17px;
+			font-size: 15px;
 		}
 
 		i[class^="icon-loop"] {
-			font-size: 17px;
+			font-size: 15px;
 		}
 
 		i[class^="icon-share"] {
-			font-size: 12px;
-			margin-right: 0;
-			margin-left: 0;
+			font-size: 11px;
 		}
 
 		i[class^="icon-list"] {
-			margin-left: 0;
-			margin-right: 0;
-			font-size: 12px;
+			font-size: 11px;
 		}
 
 		i[class^="icon-devices"] {
-			margin-left: 0;
-			margin-right: 0;
-			font-size: 12px;
+			font-size: 11px;
 		}
 
 		i[class^="icon-dont-disturb"] {
-			margin-left: 0;
-			margin-right: 0;
-			font-size: 12px;
+			font-size: 11px;
 		}
 
 		i[class^="icon-teledisk"] {
-			margin-left: 0;
-			margin-right: 0;
-			font-size: 12px;
+			font-size: 11px;
 		}
 
 		i[class^="icon-lyrics"] {
-			margin-left: 0;
-			margin-right: 0;
-			font-size: 12px;
+			font-size: 11px;
 		}
 
 		#footer {
-			text-align: left;
+			display: flex;
+            justify-content: space-between;
+            align-items: center;
 		}
 	}

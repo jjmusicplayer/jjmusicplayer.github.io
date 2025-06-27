@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Music player</title>
+  <title>Online Music Player</title>
   <link rel="stylesheet" href="fontello/css/fontello.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,6 +39,7 @@
       <button id="play" title="Odtwórz/Zatrzymaj"><i class="icon-play"></i></button>
       <button id="next" title="Następny utwór"><i class="icon-next"></i></button>
       <button id="loop" title="Zapętl"><i class="icon-loop"></i></button>
+      </div>
       <div class="footer">
         <button id="devices" title="Odtwarzanie na innych urządzeniach"><i class="icon-devices"></i></button>
         <button id="dont-disturb" title="Nie odtwarzaj tego utworu"><i class="icon-dont-disturb"></i></button>
@@ -47,7 +48,7 @@
         <button id="share" title="Udostępnij"><i class="icon-share"></i></button>
         <button id="list" title="Lista odtwarzania"><i class="icon-list"></i></button>
       </div>
-    </div>
+    
   </div>
   <div id="lyrics-overlay" class="hidden">
     <div id="lyrics-container" class="lyrics-bg">
@@ -62,11 +63,13 @@
       <div id="bottom-bar" class="lyrics-bg">
         <audio id="audio-lyr" src="music/ballada-o-samotnosci.mp3"></audio>
         <input type="range" id="seek-lyr" value="0" />
+        <div class="bottom-controls">
         <button id="hide-lyrics"><i class="icon-open"></i></button>
         <button id="prev-lyr"><i class="icon-previous"></i></button>
         <button id="play-lyr"><i class="icon-play"></i></button>
         <button id="next-lyr"><i class="icon-next"></i></button>
         <button id="loop-lyr"><i class="icon-loop"></i></button>
+      </div>
       </div>
     </div>
   </div>

@@ -124,7 +124,8 @@ const nextBtn = document.getElementById("next");
 const playLyr = document.getElementById("play-lyr");
 const prevLyr = document.getElementById("prev-lyr");
 const nextLyr = document.getElementById("next-lyr");
-const seekBar = document.getElementById("seek-lyr");
+const seekBar = document.getElementById("seek");
+const seekBarLyr = document.getElementById("seek-lyr");
 const currentTimeElem = document.getElementById("current-time");
 const durationElem = document.getElementById("duration");
 const titleElem = document.querySelector("h1");
@@ -244,6 +245,7 @@ audio.addEventListener("ended", () => {
 audio.addEventListener("timeupdate", () => {
   const percentage = (audio.currentTime / audio.duration) * 100 || 0;
   seekBar.value = percentage;
+  seekBarLyr.value = percentage;
   updateSeekBackground();
   currentTimeElem.textContent = formatTime(audio.currentTime);
   durationElem.textContent = formatTime(audio.duration);
@@ -269,8 +271,14 @@ seekBar.addEventListener("input", () => {
   updateSeekBackground();
 });
 
+seekBarLyr.addEventListener("input", () => {
+  audio.currentTime = (seekBar.value / 100) * audio.duration;
+  updateSeekBackground();
+});
+
 function updateSeekBackground() {
   const value = seekBar.value;
+  seekBar.style.background = `linear-gradient(to right, #ededed ${value}%, rgba(237, 237, 237, 0.1) ${value}%)`;
   seekBar.style.background = `linear-gradient(to right, #ededed ${value}%, rgba(237, 237, 237, 0.1) ${value}%)`;
 }
 
