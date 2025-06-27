@@ -216,6 +216,21 @@ function setMediaMetadata(index) {
         }
       ]
     });
+    navigator.mediaSession.setActionHandler('play', () => {
+    playBtn.click();
+  });
+
+  navigator.mediaSession.setActionHandler('pause', () => {
+    playBtn.click();
+  });
+
+  navigator.mediaSession.setActionHandler('previoustrack', () => {
+    prevBtn.click(); // lub wywołaj funkcję prevTrack()
+  });
+
+  navigator.mediaSession.setActionHandler('nexttrack', () => {
+    nextBtn.click(); // lub wywołaj funkcję nextTrack()
+  });
   }
 }
 
