@@ -260,11 +260,9 @@
 		font-size: 32px;
 		background-color: #ededed;
 		color: #212121;
-		border-radius: 100px;
-		padding-left: 7px;
-		padding-top: 12px;
-		padding-bottom: 12px;
-		padding-right: 7px;
+		border-radius: 50%;
+		width: 64px;
+		height: 64px;
 	}
 
 	i[class^="icon-pause"] {
@@ -438,8 +436,6 @@
 			background-color: #ededed;
 			color: #212121;
 			border-radius: 50%;
-			width: 64px;
-			height: 64px;
 		}
 
 		i[class^="icon-pause"] {
