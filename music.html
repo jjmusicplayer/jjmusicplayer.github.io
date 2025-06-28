@@ -16,39 +16,55 @@
 </head>
 
 <body>
-  <div class="player">
-    <div id="head">
-      <span id="go-back" title="Zwiń"><i class="icon-open"></i></span>
-      „Unknown album”
-      <span id="more" title="Więcej.."><i class="icon-more"></i></span>
-    </div><br>
+  <div id="container">
+    <div id="player-mini">
+      <div id="mini-info">
+        <img src="img/unknown.png" height="40px" id="img3">
+        <div id="mini-track-info">
+          <h5>Unknown title</h5>
+          <h6>Unknown artist</h6>
+        </div>
+      </div>
+      <div id="mini-controls">
+        <button id="play-mini" title="Odtwórz/Zatrzymaj"><i class="icon-play"></i></button>
+      </div>
+    </div>
+  </div>
+  <div id="player-container" class="hidden">
+    <div id="player">
+      <div id="head">
+        <div id="go-back" title="Zwiń"><i class="icon-open"></i></div>
+        „Unknown album”
+        <div id="more" title="Więcej.."><i class="icon-more"></i></div>
+      </div><br>
 
-    <div id="img"><img src="img/unknown.png" height="300px" id="img1"></div>
-    <h1>Unknown title</h1>
-    <h2>Unknown artist</h2>
-    <audio id="audio" src="music/placeholder.mp3"></audio>
+      <div id="img"><img src="img/unknown.png" height="300px" id="img1"></div>
+      <h1>Unknown title</h1>
+      <h2>Unknown artist</h2>
+      <audio id="audio" src="music/placeholder.mp3"></audio>
 
-    <input type="range" id="seek" value="0" />
-    <div id="time-info">
-      <span id="current-time">0:00</span><span id="duration">0:00</span>
+      <input type="range" id="seek" value="0" />
+      <div id="time-info">
+        <span id="current-time">0:00</span><span id="duration">0:00</span>
+
+      </div>
+      <div class="controls">
+        <button id="shuffle" title="Odtwarzanie mieszane"><i class="icon-shuffle"></i></button>
+        <button id="prev" title="Poprzedni utwór"><i class="icon-previous"></i></button>
+        <button id="play" title="Odtwórz/Zatrzymaj"><i class="icon-play"></i></button>
+        <button id="next" title="Następny utwór"><i class="icon-next"></i></button>
+        <button id="loop" title="Zapętl"><i class="icon-loop"></i></button>
+      </div>
+      <div class="footer">
+        <button id="devices" title="Odtwarzanie na innych urządzeniach"><i class="icon-devices"></i></button>
+        <button id="dont-disturb" title="Nie odtwarzaj tego utworu"><i class="icon-dont-disturb"></i></button>
+        <button id="teledisk" title="Pokaż teledysk"><i class="icon-teledisk"></i></button>
+        <button id="lyrics" title="Pokaż tekst piosenki"><i class="icon-lyrics"></i></button>
+        <button id="share" title="Udostępnij"><i class="icon-share"></i></button>
+        <button id="list" title="Lista odtwarzania"><i class="icon-list"></i></button>
+      </div>
 
     </div>
-    <div class="controls">
-      <button id="shuffle" title="Odtwarzanie mieszane"><i class="icon-shuffle"></i></button>
-      <button id="prev" title="Poprzedni utwór"><i class="icon-previous"></i></button>
-      <button id="play" title="Odtwórz/Zatrzymaj"><i class="icon-play"></i></button>
-      <button id="next" title="Następny utwór"><i class="icon-next"></i></button>
-      <button id="loop" title="Zapętl"><i class="icon-loop"></i></button>
-    </div>
-    <div class="footer">
-      <button id="devices" title="Odtwarzanie na innych urządzeniach"><i class="icon-devices"></i></button>
-      <button id="dont-disturb" title="Nie odtwarzaj tego utworu"><i class="icon-dont-disturb"></i></button>
-      <button id="teledisk" title="Pokaż teledysk"><i class="icon-teledisk"></i></button>
-      <button id="lyrics" title="Pokaż tekst piosenki"><i class="icon-lyrics"></i></button>
-      <button id="share" title="Udostępnij"><i class="icon-share"></i></button>
-      <button id="list" title="Lista odtwarzania"><i class="icon-list"></i></button>
-    </div>
-
   </div>
   <div id="lyrics-overlay" class="hidden">
     <div id="lyrics-container" class="lyrics-bg">

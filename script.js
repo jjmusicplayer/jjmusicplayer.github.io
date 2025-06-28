@@ -33,7 +33,7 @@ const playlist = [
     lyrics: "Co to jest miłość?<br>Łzy znowu lecą mi na nowy Vlone na na<br>Do zdjęcia uśmiech a wszystko się zmienia<br>Gdy w pokoju zostaję już tylko sam<br>Na na na na na na<br>Zostaję sam<br>Na na na na na na<br>Zostaję sam<br>Co to jest miłość?<br>",
     background: "linear-gradient(#e81e2a, #121212)",
     lyricsBackground: "#e81e2a",
-    explicit: "1" 
+    explicit: "1"
   },
   {
     title: "ZIOMECZKI ZIOMY",
@@ -148,6 +148,7 @@ const prevLyr = document.getElementById("prev-lyr");
 const nextLyr = document.getElementById("next-lyr");
 const seekBar = document.getElementById("seek");
 const seekBarLyr = document.getElementById("seek-lyr");
+const playMini = document.getElementById("play-mini");
 const currentTimeElem = document.getElementById("current-time");
 const durationElem = document.getElementById("duration");
 const titleElem = document.querySelector("h1");
@@ -179,16 +180,20 @@ function loadTrack(index) {
   currentTimeElem.textContent = "0:00";
   durationElem.textContent = "0:00";
   odtwarzanie.innerHTML = `
-    <span id="go-back"><i class="icon-open"></i></span>
+    <div id="go-back"><i class="icon-open"></i></div>
     „${track.album}”
-    <span id="more"><i class="icon-more"></i></span>
+    <div id="more"><i class="icon-more"></i></div>
   `;
   lyrics.innerHTML = `${track.lyrics}`;
-  document.body.style.background = track.background;
+  document.getElementById("player-container").style.background = track.background;
+  document.querySelector("#mini-track-info h5").textContent = track.title;
+  document.querySelector("#mini-track-info h6").textContent = track.artist;
+  document.getElementById("img3").src = track.cover;
+  document.getElementById('player-mini').style.background = track.lyricsBackground;
 
-  if(`${track.explicit}` == '1')
-  {
+  if (`${track.explicit}` == '1') {
     titleElem.innerHTML += '<p id="explicit">🅴</p>';
+    titleElemLyr.innerHTML += '<p id="explicit">🅴</p>';
   }
 
   document.getElementById("lyrics-overlay").style.backgroundColor = track.lyricsBackground;
@@ -217,20 +222,20 @@ function setMediaMetadata(index) {
       ]
     });
     navigator.mediaSession.setActionHandler('play', () => {
-    playBtn.click();
-  });
+      playBtn.click();
+    });
 
-  navigator.mediaSession.setActionHandler('pause', () => {
-    playBtn.click();
-  });
+    navigator.mediaSession.setActionHandler('pause', () => {
+      playBtn.click();
+    });
 
-  navigator.mediaSession.setActionHandler('previoustrack', () => {
-    prevBtn.click(); // lub wywołaj funkcję prevTrack()
-  });
+    navigator.mediaSession.setActionHandler('previoustrack', () => {
+      prevBtn.click();
+    });
 
-  navigator.mediaSession.setActionHandler('nexttrack', () => {
-    nextBtn.click(); // lub wywołaj funkcję nextTrack()
-  });
+    navigator.mediaSession.setActionHandler('nexttrack', () => {
+      nextBtn.click();
+    });
   }
 }
 
@@ -246,6 +251,7 @@ function playTrack() {
   isPlaying = true;
   playBtn.innerHTML = "<i class='icon-pause'></i>";
   playLyr.innerHTML = "<i class='icon-pause'></i>";
+  playMini.innerHTML = "<i class='icon-pause'></i>";
 }
 
 function pauseTrack() {
@@ -253,6 +259,7 @@ function pauseTrack() {
   isPlaying = false;
   playBtn.innerHTML = "<i class='icon-play'></i>";
   playLyr.innerHTML = "<i class='icon-play'></i>";
+  playMini.innerHTML = "<i class='icon-play'></i>";
 }
 
 playBtn.addEventListener("click", () => {
@@ -293,6 +300,14 @@ prevLyr.addEventListener("click", () => {
   currentTrackIndex = (currentTrackIndex - 1 + playlist.length) % playlist.length;
   loadTrack(currentTrackIndex);
   playTrack();
+});
+
+playMini.addEventListener("click", () => {
+  if (isPlaying) {
+    pauseTrack();
+  } else {
+    playTrack();
+  }
 });
 
 audio.addEventListener("ended", () => {
@@ -355,6 +370,7 @@ function updateSeekBackground() {
 }
 
 function formatTime(time) {
+  if (isNaN(time)) return "0:00";
   const minutes = Math.floor(time / 60);
   const seconds = Math.floor(time % 60);
   return `${minutes}:${seconds.toString().padStart(2, "0")}`;
@@ -372,12 +388,31 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-document.getElementById("lyrics").addEventListener('click', function () {
-  document.getElementById("lyrics-overlay").classList.toggle('hidden');
-})
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("lyrics")?.addEventListener('click', function () {
+    document.getElementById("lyrics-overlay")?.classList.toggle('hidden');
+  });
 
-document.getElementById("hide-lyrics").addEventListener('click', function () {
-  document.getElementById("lyrics-overlay").classList.toggle('hidden');
-})
+  document.getElementById("hide-lyrics")?.addEventListener('click', function () {
+    document.getElementById("lyrics-overlay")?.classList.toggle('hidden');
+  });
+
+  document.getElementById("player-mini")?.addEventListener('click', function () {
+    document.getElementById("player-container")?.classList.toggle('hidden');
+    document.getElementById("container").classList.toggle('hidden');
+  });
+
+  document.getElementById("img3")?.addEventListener('click', function () {
+    document.getElementById("player-container")?.classList.toggle('hidden');
+    document.getElementById("container").classList.toggle('hidden');
+  });
+
+  document.getElementById("head")?.addEventListener('click', function (e) {
+    if (e.target.closest("#go-back")) {
+      document.getElementById("player-container")?.classList.toggle("hidden");
+      document.getElementById("container").classList.toggle('hidden');
+    }
+  });
+});
 
 loadTrack(currentTrackIndex);
