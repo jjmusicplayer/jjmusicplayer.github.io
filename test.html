@@ -6,6 +6,8 @@
     <title>Odtwarzacz Muzyki</title>
     <link rel="stylesheet" href="fontello/css/fontello.css">
     <link rel="icon" href="favicon.png">
+    <title>Online Music Player</title>
+    <link rel="stylesheet" href="fontello/css/fontello.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
@@ -199,7 +201,7 @@
             <i class="fas fa-ellipsis-h icon"></i>
         </header>
 
-        <img src="img/toxic.jpg" alt="Okładka albumu Toxic" class="album-art">
+        <img src="img/toxic.png" alt="Okładka albumu Toxic" class="album-art">
 
         <div class="song-info">
             <div>
@@ -218,13 +220,13 @@
         </div>
 
         <div class="controls">
-            <button class="control-btn shuffle active"><i class="fas fa-random"></i></button>
-            <button class="control-btn"><i class="fas fa-step-backward"></i></button>
+            <button class="control-btn shuffle active"><i class="icon-shuffle"></i></button>
+            <button class="control-btn"><i class="icon-previous"></i></button>
             <button class="control-btn play-pause-btn" id="play-pause-btn">
-                <i class="fas fa-play" id="play-pause-icon"></i>
+                <i class="icon-play" id="play-pause-icon"></i>
             </button>
-            <button class="control-btn"><i class="fas fa-step-forward"></i></button>
-            <button class="control-btn"><i class="fas fa-redo-alt"></i></button>
+            <button class="control-btn"><i class="icon-next"></i></button>
+            <button class="control-btn"><i class="icon-loop"></i></button>
         </div>
 
         <div class="footer-controls">
@@ -258,16 +260,16 @@
         function playSong() {
             isPlaying = true;
             audioPlayer.play();
-            playPauseIcon.classList.remove('fa-play');
-            playPauseIcon.classList.add('fa-pause');
+            playPauseIcon.classList.remove('icon-play');
+            playPauseIcon.classList.add('icon-pause');
         }
 
         // Funkcja pauzy
         function pauseSong() {
             isPlaying = false;
             audioPlayer.pause();
-            playPauseIcon.classList.remove('fa-pause');
-            playPauseIcon.classList.add('fa-play');
+            playPauseIcon.classList.remove('icon-pause');
+            playPauseIcon.classList.add('icon-play');
         }
 
         // Przełączanie odtwarzania/pauzy
