@@ -63,59 +63,60 @@
 	}
 
 	.controls {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 28px 0;
-        }
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 28px 0;
+	}
+
 	.controls button {
 		cursor: pointer;
 	}
 
-        .controls #prev {
-            background: none;
-            border: none;
-            color: #b3b3b3;
-            font-size: 30px;
-            cursor: pointer;
-        }
+	.controls #prev {
+		background: none;
+		border: none;
+		color: #b3b3b3;
+		font-size: 24px;
+		cursor: pointer;
+	}
 
-		.controls #next {
-            background: none;
-            border: none;
-            color: #b3b3b3;
-            font-size: 30px;
-            cursor: pointer;
-        }
+	.controls #next {
+		background: none;
+		border: none;
+		color: #b3b3b3;
+		font-size: 24px;
+		cursor: pointer;
+	}
 
-		.controls #shuffle {
-            background: none;
-            border: none;
-            color: #b3b3b3;
-            font-size: 26px;
-            cursor: pointer;
-        }
+	.controls #shuffle {
+		background: none;
+		border: none;
+		color: #b3b3b3;
+		font-size: 20px;
+		cursor: pointer;
+	}
 
-		.controls #loop {
-            background: none;
-            border: none;
-            color: #b3b3b3;
-            font-size: 26px;
-            cursor: pointer;
-        }
-        
-        .controls #play {
-            width: 80px;
-            height: 80px;
-            background-color: #ffffff;
-            color: #000;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 35px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-        }
+	.controls #loop {
+		background: none;
+		border: none;
+		color: #b3b3b3;
+		font-size: 20px;
+		cursor: pointer;
+	}
+
+	.controls #play {
+		width: 75px;
+		height: 75px;
+		background-color: #ffffff;
+		color: #000;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 30px;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+	}
 
 	.hidden {
 		display: none;
@@ -294,40 +295,41 @@
 	}
 
 	.footer {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-		}
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
 	.footer button {
+		font-size: 14px;
 		background: none;
 		border: none;
-		font-size: 24px;
 		cursor: pointer;
 	}
 
-		.footer #devices{
-		color: #b3b3b3;	
-		}
+	.footer #devices {
+		color: #b3b3b3;
+	}
 
-		.footer #dont-disturb{
-		color: #b3b3b3;	
-		}
+	.footer #dont-disturb {
+		color: #b3b3b3;
+	}
 
-		.footer #teledisk{
-		color: #b3b3b3;	
-		}
+	.footer #teledisk {
+		color: #b3b3b3;
+	}
 
-		.footer #lyrics{
-		color: #b3b3b3;	
-		}
+	.footer #lyrics {
+		color: #b3b3b3;
+	}
 
-		.footer #share{
-		color: #b3b3b3;	
-		}
+	.footer #share {
+		color: #b3b3b3;
+	}
 
-		.footer #list{
-		color: #b3b3b3;	
-		}
+	.footer #list {
+		color: #b3b3b3;
+	}
 
 	#explicit {
 		display: inline;
@@ -380,42 +382,6 @@
 	i[class^="icon-loop"] {
 		font-size: 22px;
 	}*/
-
-	i[class^="icon-share"] {
-		font-size: 17px;
-		margin-right: 0;
-		margin-left: 0;
-	}
-
-	i[class^="icon-list"] {
-		margin-left: 0;
-		margin-right: 0;
-		font-size: 17px;
-	}
-
-	i[class^="icon-devices"] {
-		margin-left: 0;
-		margin-right: 0;
-		font-size: 17px;
-	}
-
-	i[class^="icon-dont-disturb"] {
-		margin-left: 0;
-		margin-right: 0;
-		font-size: 17px;
-	}
-
-	i[class^="icon-teledisk"] {
-		margin-left: 0;
-		margin-right: 0;
-		font-size: 17px;
-	}
-
-	i[class^="icon-lyrics"] {
-		margin-left: 0;
-		margin-right: 0;
-		font-size: 17px;
-	}
 
 	@media (max-width: 600px) {
 
@@ -475,49 +441,49 @@
 		}
 
 		.controls #prev {
-            background: none;
-            border: none;
-            color: #b3b3b3;
-            font-size: 24px;
-            cursor: pointer;
-        }
+			background: none;
+			border: none;
+			color: #b3b3b3;
+			font-size: 24px;
+			cursor: pointer;
+		}
 
 		.controls #next {
-            background: none;
-            border: none;
-            color: #b3b3b3;
-            font-size: 24px;
-            cursor: pointer;
-        }
+			background: none;
+			border: none;
+			color: #b3b3b3;
+			font-size: 24px;
+			cursor: pointer;
+		}
 
 		.controls #shuffle {
-            background: none;
-            border: none;
-            color: #b3b3b3;
-            font-size: 18px;
-            cursor: pointer;
-        }
+			background: none;
+			border: none;
+			color: #b3b3b3;
+			font-size: 18px;
+			cursor: pointer;
+		}
 
 		.controls #loop {
-            background: none;
-            border: none;
-            color: #b3b3b3;
-            font-size: 18px;
-            cursor: pointer;
-        }
-        
-        .controls #play {
-            width: 64px;
-            height: 64px;
-            background-color: #ffffff;
-            color: #000;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 28px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-        }
+			background: none;
+			border: none;
+			color: #b3b3b3;
+			font-size: 18px;
+			cursor: pointer;
+		}
+
+		.controls #play {
+			width: 64px;
+			height: 64px;
+			background-color: #ffffff;
+			color: #000;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 28px;
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+		}
 
 		#bottom-bar {
 			width: 100%;
@@ -583,29 +549,6 @@
 		i[class^="icon-loop"] {
 			font-size: 15px;
 		}*/
-		i[class^="icon-share"] {
-			font-size: 12px;
-		}
-
-		i[class^="icon-list"] {
-			font-size: 12px;
-		}
-
-		i[class^="icon-devices"] {
-			font-size: 12px;
-		}
-
-		i[class^="icon-dont-disturb"] {
-			font-size: 12px;
-		}
-
-		i[class^="icon-teledisk"] {
-			font-size: 12px;
-		}
-
-		i[class^="icon-lyrics"] {
-			font-size: 12px;
-		}
 
 		.footer {
 			display: flex;
@@ -613,27 +556,31 @@
 			align-items: center;
 		}
 
-		.footer #devices{
-		color: #b3b3b3;	
+		.footer button{
+			font-size: 12px;
 		}
 
-		.footer #dont-disturb{
-		color: #b3b3b3;	
+		.footer #devices {
+			color: #b3b3b3;
 		}
 
-		.footer #teledisk{
-		color: #b3b3b3;	
+		.footer #dont-disturb {
+			color: #b3b3b3;
 		}
 
-		.footer #lyrics{
-		color: #b3b3b3;	
+		.footer #teledisk {
+			color: #b3b3b3;
 		}
 
-		.footer #share{
-		color: #b3b3b3;	
+		.footer #lyrics {
+			color: #b3b3b3;
 		}
 
-		.footer #list{
-		color: #b3b3b3;	
+		.footer #share {
+			color: #b3b3b3;
+		}
+
+		.footer #list {
+			color: #b3b3b3;
 		}
 	}
