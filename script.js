@@ -130,6 +130,18 @@ const playlist = [
     background: "linear-gradient(#687c8c, #121212)",
     lyricsBackground: "#687c8c",
     explicit: "1"
+  },
+  {
+    title: "SQUID GAME",
+    artist: "Smileslow",
+    album: "SQUID GAME - Single",
+    src: "music/sklid-gej.mp3",
+    cover: "img/unknown.png",
+    coverSize: "1000x1000",
+    lyrics: "<br>",
+    background: "linear-gradient(#515151, #121212)",
+    lyricsBackground: "#515151",
+    explicit: "0"
   }
 ];
 
@@ -270,11 +282,28 @@ playBtn.addEventListener("click", () => {
   }
 });
 
+playMini.addEventListener("click", () => {
+  if (isPlaying) {
+    pauseTrack();
+  } else {
+    playTrack();
+  }
+});
+
 nextBtn.addEventListener("click", () => {
-  currentTrackIndex = (currentTrackIndex + 1) % playlist.length;
+  if (isShuffle) {
+    let newIndex;
+    do {
+      newIndex = Math.floor(Math.random() * playlist.length);
+    } while (newIndex === currentTrackIndex && playlist.length > 1);
+    currentTrackIndex = newIndex;
+  } else {
+    currentTrackIndex = (currentTrackIndex + 1) % playlist.length;
+  }
   loadTrack(currentTrackIndex);
   playTrack();
 });
+
 
 prevBtn.addEventListener("click", () => {
   currentTrackIndex = (currentTrackIndex - 1 + playlist.length) % playlist.length;
@@ -291,10 +320,19 @@ playLyr.addEventListener("click", () => {
 });
 
 nextLyr.addEventListener("click", () => {
-  currentTrackIndex = (currentTrackIndex + 1) % playlist.length;
+  if (isShuffle) {
+    let newIndex;
+    do {
+      newIndex = Math.floor(Math.random() * playlist.length);
+    } while (newIndex === currentTrackIndex && playlist.length > 1);
+    currentTrackIndex = newIndex;
+  } else {
+    currentTrackIndex = (currentTrackIndex + 1) % playlist.length;
+  }
   loadTrack(currentTrackIndex);
   playTrack();
 });
+
 
 prevLyr.addEventListener("click", () => {
   currentTrackIndex = (currentTrackIndex - 1 + playlist.length) % playlist.length;
@@ -397,10 +435,24 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("lyrics-overlay")?.classList.toggle('hidden');
   });
 
-  document.getElementById("player-mini")?.addEventListener('click', function () {
-    document.getElementById("player-container")?.classList.toggle('hidden');
-    document.getElementById("container").classList.toggle('hidden');
-  });
+
+// Kliknięcie w info: pokaż pełny player, ukryj mini
+document.getElementById("mini-info")?.addEventListener('click', function () {
+  document.getElementById("player-container").classList.remove('hidden');
+  document.getElementById("container").classList.add('hidden');
+  document.getElementById("player-mini").classList.add('hidden');
+});
+
+// Kliknięcie w "play-mini" — odtwarzaj lub zatrzymaj, ale NIE przełączaj widoku
+document.getElementById("play-mini")?.addEventListener("click", function (e) {
+  e.stopPropagation();
+  if (isPlaying) {
+    pauseTrack();
+  } else {
+    playTrack();
+  }
+});
+
 
   document.getElementById("img3")?.addEventListener('click', function () {
     document.getElementById("player-container")?.classList.toggle('hidden');
@@ -408,11 +460,12 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   document.getElementById("head")?.addEventListener('click', function (e) {
-    if (e.target.closest("#go-back")) {
-      document.getElementById("player-container")?.classList.toggle("hidden");
-      document.getElementById("container").classList.toggle('hidden');
-    }
-  });
+  if (e.target.closest("#go-back")) {
+    document.getElementById("player-container").classList.add("hidden");
+    document.getElementById("container").classList.remove('hidden');
+    document.getElementById("player-mini").classList.remove('hidden');
+  }
+});
 });
 
 loadTrack(currentTrackIndex);

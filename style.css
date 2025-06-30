@@ -63,10 +63,10 @@
 	}
 
 	#player-mini {
-		position: sticky;
+		position: fixed;
 		bottom: 0;
 		left: 0;
-		width: 95%;
+		width: 98%;
 		border-radius: 10px;
 		background: black;
 		color: white;
@@ -76,6 +76,7 @@
 		margin-bottom: 5px;
 		margin-left: 5px;
 		margin-right: 5px;
+		z-index: 3;
 	}
 
 	#mini-info {
@@ -89,8 +90,7 @@
 		border-radius: 5px;
 	}
 
-	#mini-controls
-	{
+	#mini-controls {
 		margin: 0;
 		width: 30%;
 		text-align: right;
@@ -104,8 +104,7 @@
 		cursor: pointer;
 	}
 
-	h5
-	{
+	h5 {
 		font-size: 15px;
 		font-weight: 500;
 		text-align: left;
@@ -116,8 +115,7 @@
 		padding: 0;
 	}
 
-	h6
-	{
+	h6 {
 		font-size: 10px;
 		font-weight: 400;
 		text-align: left;
@@ -195,6 +193,12 @@
 	.hidden {
 		display: none;
 		opacity: 0;
+		pointer-events: none;
+	}
+
+	.hidden button {
+		pointer-events: none;
+		cursor: default;
 	}
 
 	input[type="range"] {
@@ -300,7 +304,7 @@
 		height: 100%;
 		background-color: #515151;
 		color: #fff;
-		z-index: 2;
+		z-index: 4;
 		margin: 0;
 		justify-content: center;
 		transition: opacity 0.3s ease-in-out;
@@ -569,6 +573,10 @@
 
 		#bottom-bar {
 			width: 100%;
+		}
+
+		#player-mini {
+			width: 90.5%;
 		}
 
 		.bottom-controls {
