@@ -136,7 +136,7 @@ const playlist = [
     artist: "Smileslow",
     album: "SQUID GAME - Single",
     src: "music/sklid-gej.mp3",
-    cover: "img/unknown.png",
+    cover: "",
     coverSize: "1000x1000",
     lyrics: "<br>",
     background: "linear-gradient(#515151, #121212)",
@@ -196,6 +196,11 @@ function loadTrack(index) {
     „${track.album}”
     <div id="more"><i class="icon-more"></i></div>
   `;
+
+  if(track.cover == '')
+  {
+    imgElem.src = 'img/unknown.png';
+  }
   lyrics.innerHTML = `${track.lyrics}`;
   document.getElementById("player-container").style.background = track.background;
   document.querySelector("#mini-track-info h5").textContent = track.title;
@@ -436,14 +441,12 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
-// Kliknięcie w info: pokaż pełny player, ukryj mini
 document.getElementById("mini-info")?.addEventListener('click', function () {
   document.getElementById("player-container").classList.remove('hidden');
   document.getElementById("container").classList.add('hidden');
   document.getElementById("player-mini").classList.add('hidden');
 });
 
-// Kliknięcie w "play-mini" — odtwarzaj lub zatrzymaj, ale NIE przełączaj widoku
 document.getElementById("play-mini")?.addEventListener("click", function (e) {
   e.stopPropagation();
   if (isPlaying) {

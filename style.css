@@ -1,9 +1,98 @@
 	body {
 		font-family: "Poppins", sans-serif;
 		height: 100vh;
-		color: #000;
+		color: #ededed;
 		margin: 0;
-		background: linear-gradient(#515151, #121212);
+		background: #121212;
+	}
+
+	header {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin: 10px 10px 30px 10px;
+	}
+
+	.pointing {
+		background: #1ed760;
+		color: #313131;
+	}
+
+	header img {
+		height: 50px;
+		border-radius: 50%;
+	}
+
+	header button {
+		background: #313131;
+		color: #ededed;
+		font-size: 14px;
+		padding-left: 30px;
+		padding-right: 30px;
+		border: 0px;
+		border-radius: 50px;
+		font-family: "Poppins", sans-serif;
+		font-weight: 500;
+		cursor: pointer;
+	}
+
+	main {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	.recent {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 0.7rem;
+	}
+
+	.playlist-box {
+		display: flex;
+		align-items: center;
+		background: #313131;
+		border-radius: 8px;
+		padding: 0.75rem;
+		gap: 1rem;
+	}
+
+	.playlist-box img {
+		border-radius: 5px;
+		width: 50px;
+		height: 50px;
+		object-fit: cover;
+	}
+
+	.playlist-box p {
+		margin: 0;
+		font-size: 0.9rem;
+		font-weight: 500;
+	}
+
+	footer {
+		width: 360px;
+		margin-left: 32px;
+		width: 98%;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+	}
+
+	footer button {
+		background: none;
+		border: none;
+		font-size: 15px;
+		color: #b3b3b3;
+		font-family: "Poppins", sans-serif;
+		font-weight: 300;
+	}
+
+	footer i {
+		font-size: 23px;
+	}
+
+	.pointing-footer {
+		color: #ededed;
 	}
 
 	#time-info {
@@ -64,9 +153,9 @@
 
 	#player-mini {
 		position: fixed;
-		bottom: 0;
+		bottom: 80px;
 		left: 0;
-		width: 98%;
+		width: 500px;
 		border-radius: 10px;
 		background: black;
 		color: white;
@@ -467,6 +556,55 @@
 	}
 
 	@media (max-width: 600px) {
+
+		header img {
+			height: 40px;
+		}
+
+		header button {
+			font-size: 10px;
+			padding-left: 20px;
+			padding-right: 20px;
+			border: 0px;
+			border-radius: 50px;
+			font-family: "Poppins", sans-serif;
+			font-weight: 500;
+			cursor: pointer;
+		}
+
+		main {
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+
+		.playlist-box {
+			border-radius: 5px;
+			padding-left: 0.55rem;
+			padding-top: 0.5rem;
+			padding-bottom: 0.5rem;
+		}
+
+		.playlist-box img {
+			border-radius: 4px;
+			width: 40px;
+			height: 40px;
+		}
+
+		.playlist-box p {
+			font-size: 0.8rem;
+		}
+
+		footer {
+			width: 100%;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+		}
+
+		footer button {
+			margin-bottom: 15px;
+			margin-left: 15px;
+		}
 
 		#player {
 			width: 90%;

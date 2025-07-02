@@ -13,4 +13,6 @@
 .icon-lyrics:before { content: '\e80b'; } /* '' */
 .icon-teledisk:before { content: '\e80c'; } /* '' */
 .icon-download:before { content: '\e80d'; } /* '' */
+.icon-search:before { content: '\e80e'; } /* '' */
+.icon-home:before { content: '\e80f'; } /* '' */
 .icon-devices:before { content: '\f032'; } /* '' */
