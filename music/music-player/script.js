@@ -232,7 +232,7 @@ function setMediaMetadata(index) {
       album: track.album,
       artwork: [
         {
-          src: `https://jjmusicplayer.github.io/${track.cover}`,
+          src: `https://jjmusicplayer.github.io/music/music-player/${track.cover}`,
           sizes: track.coverSize || "512x512",
           type: "image/png"
         }
