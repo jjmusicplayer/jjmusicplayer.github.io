@@ -200,6 +200,7 @@ function loadTrack(index) {
   if(track.cover == '')
   {
     imgElem.src = 'img/unknown.png';
+    document.getElementById("img3").src = 'img/unknown.png';
   }
   lyrics.innerHTML = `${track.lyrics}`;
   document.getElementById("player-container").style.background = track.background;
